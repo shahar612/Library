@@ -24,5 +24,10 @@ public abstract class Book implements Comparable {
     public void setPageNumber(int pageNumber) {
         this.pageNumber = pageNumber;
     }
+
+    @Override
+    public int compareTo(Object o) {
+        return this.getBookName().compareTo(((Book)o).getBookName()) ;
+    }
 }
 
